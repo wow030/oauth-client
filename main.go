@@ -9,7 +9,7 @@ import (
 func main() {
 	server := service.CreateService()
 
-	err := http.ListenAndServeTLS(":8080", "server.crt", "server.key", server.Mux)
+	err := http.ListenAndServe(":8080", server.Mux)
 	if err != nil {
 		log.Fatal(err)
 	}
