@@ -9,7 +9,7 @@ import (
 func main() {
 	server := service.CreateService()
 
-	err := http.ListenAndServe(":80", server.Mux)
+	err := http.ListenAndServe(":8000", server.Mux)
 	if err != nil {
 		log.Fatal(err)
 	}
