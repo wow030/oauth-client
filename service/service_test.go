@@ -4,9 +4,14 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"oauth-client/service"
+	"os"
 	"testing"
 )
 
+func TestMain(m *testing.M) {
+	os.Setenv("TOKEN_URL", "http://localhost:8001/token")
+	os.Exit(m.Run())
+}
 func TestGuestHandler(t *testing.T) {
 	service := service.CreateService()
 	request := httptest.NewRequest(http.MethodGet, "/guest", nil)

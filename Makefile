@@ -1,6 +1,6 @@
 run:
-	REDIRECT_URL=https://localhost:8000/redirect \
-	TOKEN_URL=https://localhost:8001/token \
+	REDIRECT_URL=http://localhost:8000/redirect \
+	TOKEN_URL=http://localhost:8001/token \
 	go run .
 
 test:
